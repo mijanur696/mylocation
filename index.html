@@ -21,13 +21,23 @@
 
 
     <script>
-        window.navigator.geolocation.getCurrentPosition(
+           window.navigator.geolocation.getCurrentPosition(
             function lat(position){
-              document.write(position.coords.latitude)
-              document.write("<br>")
-              document.write(position.coords.longitude)
+              var x=position.coords.latitude;
+              let a=parseInt(x);
+              var y=position.coords.longitude;
+              let b=parseInt(y);
+              if(a==24 && b==88){
+            document.write('Now you are in lalgola');
+        }
+
+        else{
+            document.write('Location not found')
+        }
             }
         )
+
+        
     </script>
 </body>
 </html>
